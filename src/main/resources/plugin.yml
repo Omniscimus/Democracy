@@ -1,0 +1,6 @@
+name: ${pom.parent.artifactId}
+version: ${pom.version}
+description: Keeps track of players' playtime.
+
+main: net.omniscimus.bukkit.democracy.Main
+database: false
