@@ -45,4 +45,24 @@ public abstract class PluginCommand {
     public abstract void run()
             throws WrongArgumentsNumberException, WrongSenderTypeException, WrongSyntaxException, NoPermissionException;
 
+    /**
+     * Cuts some elements off an array.
+     * 
+     * @param array
+     *            The array to prune.
+     * @param start
+     *            The array entry from which the new array should start.
+     * @param end
+     *            The array entry where the new array should end (exclusive).
+     * @return a new array which ranges from {@code array[start]} to
+     *         {@code array[end - 1]}.
+     */
+    public static String[] subArray(String[] array, int start, int end) {
+        String[] subArray = new String[end - start];
+        for (int i = 0; i < subArray.length; i++) {
+            subArray[i] = array[start + i];
+        }
+        return subArray;
+    }
+
 }

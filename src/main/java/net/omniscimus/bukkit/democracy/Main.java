@@ -167,7 +167,7 @@ public class Main extends JavaPlugin implements Listener {
             if (args.length == 0) {
                 new InfoCommand(sender, args).run();
             } else {
-                String[] subArgs = subArray(args, 1, args.length);
+                String[] subArgs = PluginCommand.subArray(args, 1, args.length);
                 switch (args[0]) {
                 // TODO help command: /dc h, /dc help, /dc ?
                 case "opt-in":
@@ -213,26 +213,6 @@ public class Main extends JavaPlugin implements Listener {
             onDisable();
             onEnable();
         }
-    }
-
-    /**
-     * Cuts some elements off an array.
-     * 
-     * @param array
-     *            The array to prune.
-     * @param start
-     *            The array entry from which the new array should start.
-     * @param end
-     *            The array entry where the new array should end (exclusive).
-     * @return a new array which ranges from {@code array[start]} to
-     *         {@code array[end - 1]}.
-     */
-    private String[] subArray(String[] array, int start, int end) {
-        String[] subArray = new String[end - start];
-        for (int i = 0; i < subArray.length; i++) {
-            subArray[i] = array[start + i];
-        }
-        return subArray;
     }
 
 }
