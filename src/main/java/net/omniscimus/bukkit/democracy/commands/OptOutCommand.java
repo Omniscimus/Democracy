@@ -23,7 +23,7 @@ public class OptOutCommand extends PluginCommand {
      */
     private static final String OPTED_OUT = ChatColor.GOLD + "You have opted out of the Democracy system. "
             + "Your playtime will no longer be logged. "
-            + "Please note that the consequence of this is that you cannot vote.";
+            + "Please note that the consequence of this is that you will not be able to vote.";
 
     /**
      * The message that should be sent to the command sender when he had already

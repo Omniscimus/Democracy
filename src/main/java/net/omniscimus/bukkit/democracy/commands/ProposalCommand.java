@@ -49,7 +49,7 @@ public class ProposalCommand extends PluginCommand {
                 throw new WrongSyntaxException();
             }
             sender.sendMessage(ChatColor.RED + "" + checkVotes(propId, optionId) + ChatColor.GOLD
-                    + " players have voted for this proposal.");
+                    + " players have voted for this proposal option.");
             break;
         case "add":
             if (!sender.hasPermission("democracy.admin"))
@@ -59,6 +59,7 @@ public class ProposalCommand extends PluginCommand {
                     + "' has been created.");
             // Kek, actually it wasn't created, but it will be created as soon
             // as the commandsender adds information
+            // TODO be honest
             break;
         case "remove":
             if (!sender.hasPermission("democracy.admin"))
@@ -96,6 +97,8 @@ public class ProposalCommand extends PluginCommand {
                 argsConcat.append(args[i]);
             }
             editProposal(id3, args[2], argsConcat.toString());
+            // TODO feedback
+            // TODO make it possible to add options
             break;
         case "toggle":
             if (!sender.hasPermission("democracy.admin"))

@@ -58,7 +58,7 @@ public class VoteCommand extends PluginCommand {
         if (voter.vote(proposalId, optionId)) {
             sender.sendMessage(ChatColor.GOLD + "Your vote has been registered.");
         } else {
-            sender.sendMessage(ChatColor.GOLD + "You have already voted on this proposal!");
+            sender.sendMessage(ChatColor.GOLD + "Voting failed."); // TODO specify: already voted, or not opted in, or invalid proposal, or invalid option
         }
     }
 

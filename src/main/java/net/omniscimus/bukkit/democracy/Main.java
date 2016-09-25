@@ -51,6 +51,7 @@ public class Main extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         saveDefaultConfig();
+        Configuration.setConfig(getConfig());
 
         DateFormatter date = new DateFormatter(new Date(System.currentTimeMillis()));
         weekNumber = date.getWeekNumber();
@@ -71,9 +72,7 @@ public class Main extends JavaPlugin implements Listener {
      */
     @Override
     public void onDisable() {
-        getServer().getScheduler().runTaskLater(this, () -> {
-            weekChangeChecker.cancel();
-        }, 20L);
+        weekChangeChecker.cancel();
         for (Player player : Bukkit.getOnlinePlayers()) {
             deregisterVoter(player);
         }
@@ -129,9 +128,11 @@ public class Main extends JavaPlugin implements Listener {
     private void deregisterVoter(Player player) {
         long now = System.currentTimeMillis();
         Voter voter = getVoter(player);
-        voter.setLogoutTime(now);
-        voter.updatePlaytime();
-        onlineVoters.remove(voter);
+        if (voter != null) {
+            voter.setLogoutTime(now);
+            voter.updatePlaytime();
+            onlineVoters.remove(voter);
+        }
     }
 
     /**
@@ -168,6 +169,7 @@ public class Main extends JavaPlugin implements Listener {
             } else {
                 String[] subArgs = subArray(args, 1, args.length);
                 switch (args[0]) {
+                // TODO help command: /dc h, /dc help, /dc ?
                 case "opt-in":
                     new OptInCommand(sender, subArgs).run();
                     break;
