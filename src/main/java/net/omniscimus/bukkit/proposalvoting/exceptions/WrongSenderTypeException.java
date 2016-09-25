@@ -1,4 +1,4 @@
-package net.omniscimus.bukkit.democracy.exceptions;
+package net.omniscimus.bukkit.proposalvoting.exceptions;
 
 /**
  * Thrown if a CommandSender sent a command to this plugin, but was not of the

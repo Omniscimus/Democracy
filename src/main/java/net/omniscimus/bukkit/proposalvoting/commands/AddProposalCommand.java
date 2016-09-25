@@ -1,10 +1,10 @@
-package net.omniscimus.bukkit.democracy.commands;
+package net.omniscimus.bukkit.proposalvoting.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
-import net.omniscimus.bukkit.democracy.Configuration;
-import net.omniscimus.bukkit.democracy.exceptions.NoPermissionException;
+import net.omniscimus.bukkit.proposalvoting.Configuration;
+import net.omniscimus.bukkit.proposalvoting.exceptions.NoPermissionException;
 
 /**
  * Represents the command that is issued by senders who intend to create a new

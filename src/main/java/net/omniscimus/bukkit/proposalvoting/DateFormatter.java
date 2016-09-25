@@ -1,4 +1,4 @@
-package net.omniscimus.bukkit.democracy;
+package net.omniscimus.bukkit.proposalvoting;
 
 import java.util.Calendar;
 import java.util.Date;

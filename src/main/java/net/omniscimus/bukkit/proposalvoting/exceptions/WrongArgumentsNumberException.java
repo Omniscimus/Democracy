@@ -1,4 +1,4 @@
-package net.omniscimus.bukkit.democracy.exceptions;
+package net.omniscimus.bukkit.proposalvoting.exceptions;
 
 /**
  * Thrown if a command was sent to this plugin with too many or too few command

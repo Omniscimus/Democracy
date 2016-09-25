@@ -1,11 +1,11 @@
-package net.omniscimus.bukkit.democracy.commands;
+package net.omniscimus.bukkit.proposalvoting.commands;
 
 import org.bukkit.command.CommandSender;
 
-import net.omniscimus.bukkit.democracy.PluginCommand;
-import net.omniscimus.bukkit.democracy.exceptions.WrongArgumentsNumberException;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSenderTypeException;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSyntaxException;
+import net.omniscimus.bukkit.proposalvoting.PluginCommand;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongArgumentsNumberException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSenderTypeException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSyntaxException;
 
 /**
  * Represents the command that is issued when the sender should receive

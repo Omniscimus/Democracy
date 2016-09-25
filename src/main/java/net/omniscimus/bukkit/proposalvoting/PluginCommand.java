@@ -1,11 +1,11 @@
-package net.omniscimus.bukkit.democracy;
+package net.omniscimus.bukkit.proposalvoting;
 
 import org.bukkit.command.CommandSender;
 
-import net.omniscimus.bukkit.democracy.exceptions.NoPermissionException;
-import net.omniscimus.bukkit.democracy.exceptions.WrongArgumentsNumberException;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSenderTypeException;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSyntaxException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.NoPermissionException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongArgumentsNumberException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSenderTypeException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSyntaxException;
 
 /**
  * Represents a user command for this plugin.

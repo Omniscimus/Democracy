@@ -1,4 +1,4 @@
-package net.omniscimus.bukkit.democracy.commands;
+package net.omniscimus.bukkit.proposalvoting.commands;
 
 import java.util.UUID;
 
@@ -6,14 +6,14 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import net.omniscimus.bukkit.democracy.Configuration;
-import net.omniscimus.bukkit.democracy.PluginCommand;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSenderTypeException;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSyntaxException;
+import net.omniscimus.bukkit.proposalvoting.Configuration;
+import net.omniscimus.bukkit.proposalvoting.PluginCommand;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSenderTypeException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSyntaxException;
 
 /**
  * Represents the command that is issued by a player when he intends to opt out
- * of the Democracy system.
+ * of the ProposalVoting system.
  */
 public class OptOutCommand extends PluginCommand {
 
@@ -21,7 +21,7 @@ public class OptOutCommand extends PluginCommand {
      * The message that should be sent to the command sender when he has
      * successfully opted out.
      */
-    private static final String OPTED_OUT = ChatColor.GOLD + "You have opted out of the Democracy system. "
+    private static final String OPTED_OUT = ChatColor.GOLD + "You have opted out of the ProposalVoting system. "
             + "Your playtime will no longer be logged. "
             + "Please note that the consequence of this is that you will not be able to vote.";
 
@@ -30,7 +30,7 @@ public class OptOutCommand extends PluginCommand {
      * opted in.
      */
     private static final String ALREADY_OPTED_OUT = ChatColor.RED
-            + "You are already opted out of the Democracy system.";
+            + "You are already opted out of the ProposalVoting system.";
 
     /**
      * Creates a new OptOutCommand instance.
@@ -45,7 +45,7 @@ public class OptOutCommand extends PluginCommand {
     }
 
     /**
-     * Registers the command sender as opted out of the Democracy system.
+     * Registers the command sender as opted out of the ProposalVoting system.
      */
     @Override
     public void run() throws WrongSyntaxException, WrongSenderTypeException {

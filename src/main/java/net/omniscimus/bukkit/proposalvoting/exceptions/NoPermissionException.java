@@ -1,4 +1,4 @@
-package net.omniscimus.bukkit.democracy.exceptions;
+package net.omniscimus.bukkit.proposalvoting.exceptions;
 
 /**
  * Thrown when someone tried to do an action for which he did not have

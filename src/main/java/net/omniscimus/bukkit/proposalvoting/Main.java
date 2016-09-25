@@ -1,4 +1,4 @@
-package net.omniscimus.bukkit.democracy;
+package net.omniscimus.bukkit.proposalvoting;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,15 +15,15 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
 
-import net.omniscimus.bukkit.democracy.commands.ProposalCommand;
-import net.omniscimus.bukkit.democracy.commands.InfoCommand;
-import net.omniscimus.bukkit.democracy.commands.OptInCommand;
-import net.omniscimus.bukkit.democracy.commands.OptOutCommand;
-import net.omniscimus.bukkit.democracy.commands.VoteCommand;
-import net.omniscimus.bukkit.democracy.exceptions.NoPermissionException;
-import net.omniscimus.bukkit.democracy.exceptions.WrongArgumentsNumberException;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSenderTypeException;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSyntaxException;
+import net.omniscimus.bukkit.proposalvoting.commands.InfoCommand;
+import net.omniscimus.bukkit.proposalvoting.commands.OptInCommand;
+import net.omniscimus.bukkit.proposalvoting.commands.OptOutCommand;
+import net.omniscimus.bukkit.proposalvoting.commands.ProposalCommand;
+import net.omniscimus.bukkit.proposalvoting.commands.VoteCommand;
+import net.omniscimus.bukkit.proposalvoting.exceptions.NoPermissionException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongArgumentsNumberException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSenderTypeException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSyntaxException;
 
 /**
  * Main class for this plugin. The path to this class is in plugin.yml.
@@ -163,6 +163,7 @@ public class Main extends JavaPlugin implements Listener {
      */
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        // TODO check for permissions in all applicable commands.
         try {
             if (args.length == 0) {
                 new InfoCommand(sender, args).run();

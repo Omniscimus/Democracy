@@ -1,4 +1,4 @@
-package net.omniscimus.bukkit.democracy;
+package net.omniscimus.bukkit.proposalvoting;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -29,7 +29,7 @@ public class Configuration {
     }
 
     /**
-     * Gets whether a player has opted in to the Democracy system, thereby
+     * Gets whether a player has opted in to the ProposalVoting system, thereby
      * approving of logging his playtime.
      * 
      * @param playerId
@@ -41,7 +41,7 @@ public class Configuration {
     }
 
     /**
-     * Changes whether a player has opted in to the Democracy system, thereby
+     * Changes whether a player has opted in to the ProposalVoting system, thereby
      * approving of logging his playtime.
      * 
      * @param playerId

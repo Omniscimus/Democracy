@@ -1,4 +1,4 @@
-package net.omniscimus.bukkit.democracy.commands;
+package net.omniscimus.bukkit.proposalvoting.commands;
 
 import java.util.UUID;
 
@@ -6,14 +6,14 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import net.omniscimus.bukkit.democracy.Configuration;
-import net.omniscimus.bukkit.democracy.PluginCommand;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSenderTypeException;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSyntaxException;
+import net.omniscimus.bukkit.proposalvoting.Configuration;
+import net.omniscimus.bukkit.proposalvoting.PluginCommand;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSenderTypeException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSyntaxException;
 
 /**
  * Represents the command that is issued by a player when he intends to opt in
- * to the Democracy system.
+ * to the ProposalVoting system.
  */
 public class OptInCommand extends PluginCommand {
 
@@ -21,7 +21,7 @@ public class OptInCommand extends PluginCommand {
      * The message that should be sent to the command sender when he has
      * successfully opted in.
      */
-    private static final String OPTED_IN = ChatColor.GOLD + "You have opted in to the Democracy system. "
+    private static final String OPTED_IN = ChatColor.GOLD + "You have opted in to the ProposalVoting system. "
             + "Your total amount of playtime per week will be logged. "
             + "This is to make sure that only active players can vote.";
 
@@ -29,7 +29,7 @@ public class OptInCommand extends PluginCommand {
      * The message that should be sent to the command sender when he had already
      * opted in.
      */
-    private static final String ALREADY_OPTED_IN = ChatColor.RED + "You have already opted in to the Democracy system.";
+    private static final String ALREADY_OPTED_IN = ChatColor.RED + "You have already opted in to the ProposalVoting system.";
 
     /**
      * Creates a new PluginCommand instance.
@@ -44,7 +44,7 @@ public class OptInCommand extends PluginCommand {
     }
 
     /**
-     * Registers the command sender, if possible, as opted in to the Democracy
+     * Registers the command sender, if possible, as opted in to the ProposalVoting
      * system.
      */
     @Override

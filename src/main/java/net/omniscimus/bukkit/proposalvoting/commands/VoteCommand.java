@@ -1,13 +1,13 @@
-package net.omniscimus.bukkit.democracy.commands;
+package net.omniscimus.bukkit.proposalvoting.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import net.omniscimus.bukkit.democracy.PluginCommand;
-import net.omniscimus.bukkit.democracy.Voter;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSenderTypeException;
-import net.omniscimus.bukkit.democracy.exceptions.WrongSyntaxException;
+import net.omniscimus.bukkit.proposalvoting.PluginCommand;
+import net.omniscimus.bukkit.proposalvoting.Voter;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSenderTypeException;
+import net.omniscimus.bukkit.proposalvoting.exceptions.WrongSyntaxException;
 
 /**
  * Represents the command that is issued by a player who intends to vote on a
