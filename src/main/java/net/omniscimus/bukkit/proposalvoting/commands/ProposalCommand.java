@@ -36,19 +36,19 @@ public class ProposalCommand extends PluginCommand {
 
         switch (args[0]) {
         case "check":
-            ((CheckProposalCommand) this).run();
+            new CheckProposalCommand(sender, args).run();
             break;
         case "add":
-            ((AddProposalCommand) this).run();
+            new AddProposalCommand(sender, args).run();
             break;
         case "remove":
-            ((RemoveProposalCommand) this).run();
+            new RemoveProposalCommand(sender, args).run();
             break;
         case "edit":
-            ((EditProposalCommand) this).run();
+            new EditProposalCommand(sender, args).run();
             break;
         case "toggle":
-            ((ToggleProposalCommand) this).run();
+            new ToggleProposalCommand(sender, args).run();
             break;
         default:
             throw new WrongSyntaxException();
