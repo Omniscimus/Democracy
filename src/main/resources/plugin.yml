@@ -6,9 +6,9 @@ main: net.omniscimus.bukkit.proposalvoting.Main
 database: false
 
 commands:
-   democracy:
-      aliases: [dc]
-      description: The main command for the ${pom.parent.artifactId} plugin.
+   proposalvoting:
+      aliases: [pv]
+      description: The main command for the ${pom.artifactId} plugin.
       permission: proposalvoting.user
 permissions:
    democracy.user:

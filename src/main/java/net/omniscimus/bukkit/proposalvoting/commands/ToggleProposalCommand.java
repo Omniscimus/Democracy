@@ -31,7 +31,7 @@ public class ToggleProposalCommand extends ProposalCommand {
      */
     @Override
     public void run() throws NoPermissionException, WrongSyntaxException {
-        if (!sender.hasPermission("democracy.admin"))
+        if (!sender.hasPermission("proposalvoting.admin"))
             throw new NoPermissionException();
         if (args.length != 2)
             throw new WrongSyntaxException();

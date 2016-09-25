@@ -29,7 +29,7 @@ public class AddProposalCommand extends ProposalCommand {
      */
     @Override
     public void run() throws NoPermissionException {
-        if (!sender.hasPermission("democracy.admin"))
+        if (!sender.hasPermission("proposalvoting.admin"))
             throw new NoPermissionException();
         int id1 = createProposal();
         sender.sendMessage(
