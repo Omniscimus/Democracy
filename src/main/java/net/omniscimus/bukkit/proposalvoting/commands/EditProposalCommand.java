@@ -94,9 +94,9 @@ public class EditProposalCommand extends ProposalCommand {
      */
     String concatenateArgs(String[] args, int start, int end) {
         StringBuilder argsConcat = new StringBuilder();
-        for (int i = 3; i <= end; i++) {
+        for (int i = start; i <= end; i++) {
             argsConcat.append(args[i]);
-            if (i == args.length - 1)
+            if (i != end)
                 argsConcat.append(" ");
         }
         return argsConcat.toString();

@@ -51,7 +51,7 @@ public class Main extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         saveDefaultConfig();
-        Configuration.setConfig(getConfig());
+        Configuration.init(this);
 
         DateFormatter date = new DateFormatter(new Date(System.currentTimeMillis()));
         weekNumber = date.getWeekNumber();
