@@ -1,6 +1,17 @@
-name: ${pom.parent.artifactId}
+name: ${pom.artifactId}
 version: ${pom.version}
 description: Keeps track of players' playtime.
 
 main: net.omniscimus.bukkit.democracy.Main
 database: false
+
+commands:
+   democracy:
+      aliases: [dc]
+      description: The main command for the ${pom.parent.artifactId} plugin.
+      permission: democracy.user
+permissions:
+   democracy.user:
+      default: true
+   democracy.admin:
+      default: op
